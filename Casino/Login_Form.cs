@@ -49,7 +49,7 @@ namespace Casino
 
         private void Create_account_button_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server=192.168.0.6;Database=casinodatabase;User ID=root;Password=123123;";
+            string connectionString = "Server=IP;Database=casinodatabase;User ID=root;Password=123123;";
 
             string userName = LoginName_TextBox.Text;
             string userPassword = HashPassword(LoginPassword_TextBox.Text);
