@@ -14,7 +14,7 @@ namespace Casino
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
-            string connectionString = "Server=192.168.0.6;Database=casinodatabase;User ID=root;Password=123123;";
+            string connectionString = "Server=IP;Database=casinodatabase;User ID=root;Password=123123;";
 
             try
             {
