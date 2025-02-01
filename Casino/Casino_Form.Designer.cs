@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Casino_Form";
+            ToBlackJackbutton = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            SuspendLayout();
+            // 
+            // ToBlackJackbutton
+            // 
+            ToBlackJackbutton.Location = new Point(355, 91);
+            ToBlackJackbutton.Name = "ToBlackJackbutton";
+            ToBlackJackbutton.Size = new Size(75, 23);
+            ToBlackJackbutton.TabIndex = 0;
+            ToBlackJackbutton.Text = "BlackJack";
+            ToBlackJackbutton.UseVisualStyleBackColor = true;
+            ToBlackJackbutton.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(389, 169);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 1;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(355, 269);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 2;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // Casino_Form
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(ToBlackJackbutton);
+            Name = "Casino_Form";
+            Text = "Casino_Form";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button ToBlackJackbutton;
+        private Button button2;
+        private Button button3;
     }
 }

@@ -1,12 +1,15 @@
-using MySql.Data.MySqlClient;
-using System.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System;
+using Microsoft.Data.SqlClient;
 using System.Security.Cryptography;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Casino
 {
     public partial class Login_Form : Form
     {
+        private readonly string connectionString = "Server=DESKTOP-C7TE4MK;Database=UserApp3;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true";
+
         public Login_Form()
         {
             InitializeComponent();
@@ -14,26 +17,12 @@ namespace Casino
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
-            string connectionString = "Server=192.168.0.6;Database=casinodatabase;User ID=root;Password=123123;";
-
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    MessageBox.Show("Connection to server established.");
-
-                    string createTableQuery = @"
-                    CREATE TABLE IF NOT EXISTS Users (
-                        Id INT AUTO_INCREMENT PRIMARY KEY,
-                        Username VARCHAR(255) NOT NULL,
-                        PasswordHash VARCHAR(255) NOT NULL
-                    );";
-                    using (MySqlCommand command = new MySqlCommand(createTableQuery, connection))
-                    {
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Table Users created or already exists.");
-                    }
+                    MessageBox.Show("Connection to SQL Server established.");
                 }
             }
             catch (Exception ex)
@@ -42,80 +31,105 @@ namespace Casino
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Create_account_button_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server=192.168.0.6;Database=casinodatabase;User ID=root;Password=123123;";
+            string userName = LoginName_TextBox.Text.Trim();
+            string userPassword = LoginPassword_TextBox.Text.Trim();
 
-            string userName = LoginName_TextBox.Text;
-            string userPassword = HashPassword(LoginPassword_TextBox.Text);
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(userPassword))
+            {
+                MessageBox.Show("Please enter a username and password.");
+                return;
+            }
+
+            string hashedPassword = HashPassword(userPassword);
 
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO Users (Username, PasswordHash) VALUES (@Username, @PasswordHash)";
+                    string query = "INSERT INTO Users (UserName, PasswordHash, Money) VALUES (@UserName, @PasswordHash, @Money)";
 
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Username", userName);
-                        command.Parameters.AddWithValue("@PasswordHash", userPassword);
-                        command.Parameters.AddWithValue("@Money", 2000);
+                        command.Parameters.Add(new SqlParameter("@UserName", System.Data.SqlDbType.NVarChar, 50)).Value = userName;
+                        command.Parameters.Add(new SqlParameter("@PasswordHash", System.Data.SqlDbType.NVarChar, 256)).Value = hashedPassword;
+                        command.Parameters.Add(new SqlParameter("@Money", System.Data.SqlDbType.Int)).Value = 2000;
 
-                        command.ExecuteNonQuery();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Account created successfully!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to create account. Try again.");
+                        }
                     }
-
-                    MessageBox.Show("Account created successfully!");
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-
-        }
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hashBytes);
+                if (ex.Number == 2627) // Unique constraint violation
+                {
+                    MessageBox.Show("Username already exists. Please choose a different one.");
+                }
+                else
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
         }
 
         private void Login_account_button_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;Database=casinodatabase;User ID=root;Password=123123;";
-            string userName = LoginName_TextBox.Text;
-            string userPassword = HashPassword(LoginPassword_TextBox.Text);
+            string userName = LoginName_TextBox.Text.Trim();
+            string userPassword = LoginPassword_TextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(userPassword))
+            {
+                MessageBox.Show("Please enter your username and password.");
+                return;
+            }
+
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    string query = "SELECT COUNT(*) FROM Users WHERE UserName = @UserName AND PasswordHash = @PasswordHash";
+                    string sqlQuery = "SELECT PasswordHash FROM Users WHERE UserName = @UserName";
 
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@UserName", userName);
-                        command.Parameters.AddWithValue("@PasswordHash", userPassword);
+                        command.Parameters.Add(new SqlParameter("@UserName", System.Data.SqlDbType.NVarChar, 50)).Value = userName;
 
-                        int userCount = Convert.ToInt32(command.ExecuteScalar());
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string storedHash = reader["PasswordHash"].ToString();
 
-                        if (userCount > 0)
-                        {
-                            MessageBox.Show("Login successful!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid username or password.");
+                                if (VerifyPassword(storedHash, userPassword))
+                                {
+                                    MessageBox.Show("Login Successful!");
+
+                                    Casino_Form form = new Casino_Form();
+                                    form.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid password.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("User not found.");
+                            }
                         }
                     }
                 }
@@ -126,6 +140,24 @@ namespace Casino
             }
         }
 
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
 
+        private bool VerifyPassword(string storedHash, string inputPassword)
+        {
+            string inputHash = HashPassword(inputPassword);
+            return storedHash.Equals(inputHash, StringComparison.OrdinalIgnoreCase);
+        }
     }
 }
