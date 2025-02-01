@@ -17,6 +17,11 @@ namespace Casino
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+            string connectionString = "Server=IP;Database=casinodatabase;User ID=root;Password=123123;";
+
+>>>>>>> 565f671068e87606d3ea1621207ddeaebe8a92e3
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -33,8 +38,12 @@ namespace Casino
 
         private void Create_account_button_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             string userName = LoginName_TextBox.Text.Trim();
             string userPassword = LoginPassword_TextBox.Text.Trim();
+=======
+            string connectionString = "Server=IP;Database=casinodatabase;User ID=root;Password=123123;";
+>>>>>>> 565f671068e87606d3ea1621207ddeaebe8a92e3
 
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(userPassword))
             {
