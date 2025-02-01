@@ -17,11 +17,6 @@ namespace Casino
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
-            string connectionString = "Server=IP;Database=casinodatabase;User ID=root;Password=123123;";
-
->>>>>>> 565f671068e87606d3ea1621207ddeaebe8a92e3
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -38,12 +33,8 @@ namespace Casino
 
         private void Create_account_button_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             string userName = LoginName_TextBox.Text.Trim();
             string userPassword = LoginPassword_TextBox.Text.Trim();
-=======
-            string connectionString = "Server=IP;Database=casinodatabase;User ID=root;Password=123123;";
->>>>>>> 565f671068e87606d3ea1621207ddeaebe8a92e3
 
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(userPassword))
             {
@@ -59,11 +50,11 @@ namespace Casino
                 {
                     connection.Open();
 
-                    string query = "INSERT INTO Users (UserName, PasswordHash, Money) VALUES (@UserName, @PasswordHash, @Money)";
+                    string query = "INSERT INTO Users (Username, PasswordHash, Money) VALUES (@Username, @PasswordHash, @Money)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.Add(new SqlParameter("@UserName", System.Data.SqlDbType.NVarChar, 50)).Value = userName;
+                        command.Parameters.Add(new SqlParameter("@Username", System.Data.SqlDbType.NVarChar, 50)).Value = userName;
                         command.Parameters.Add(new SqlParameter("@PasswordHash", System.Data.SqlDbType.NVarChar, 256)).Value = hashedPassword;
                         command.Parameters.Add(new SqlParameter("@Money", System.Data.SqlDbType.Int)).Value = 2000;
 
@@ -110,11 +101,11 @@ namespace Casino
                 {
                     connection.Open();
 
-                    string sqlQuery = "SELECT PasswordHash FROM Users WHERE UserName = @UserName";
+                    string sqlQuery = "SELECT PasswordHash FROM Users WHERE Username = @Username";
 
                     using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                     {
-                        command.Parameters.Add(new SqlParameter("@UserName", System.Data.SqlDbType.NVarChar, 50)).Value = userName;
+                        command.Parameters.Add(new SqlParameter("@Username", System.Data.SqlDbType.NVarChar, 50)).Value = userName;
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {

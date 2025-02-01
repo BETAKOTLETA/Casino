@@ -46,8 +46,7 @@
               "RelativeToolTip": "Casino\\Casino_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T12:53:14.638Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "Casino\\Login_Form.Designer.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAASwFkAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T16:08:24.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-01T16:08:24.522Z"
             },
             {
               "$type": "Document",
@@ -82,7 +80,7 @@
               "RelativeDocumentMoniker": "Casino\\Login_Form.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.cs",
               "RelativeToolTip": "Casino\\Login_Form.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAAAGcAAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-01T16:06:32.493Z",
               "EditorCaption": ""
@@ -97,8 +95,7 @@
               "RelativeToolTip": "Casino\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T12:49:48.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-01T12:49:48.915Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Casino\\Casino_Form.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T15:18:04.982Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-01T15:18:04.982Z"
             },
             {
               "$type": "Document",
@@ -122,8 +118,7 @@
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.cs [Design]",
               "RelativeToolTip": "Casino\\Login_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:53:22.951Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-15T12:53:22.951Z"
             }
           ]
         }
