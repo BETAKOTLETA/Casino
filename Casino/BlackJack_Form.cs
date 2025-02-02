@@ -42,10 +42,10 @@ namespace Casino
 
         private void UpdateUI()
         {
-            PlayerCardsLabel.Text = string.Join(", ", _playerHand.Select(c => c.ToString()));
+            PlayerValueLabel.Text = string.Join(", ", _playerHand.Select(c => c.ToString()));
             PlayerValueLabel.Text = CalculateHandValue(_playerHand).ToString();
 
-            DealerCardsLabel.Text = "Hidden, " + string.Join(", ", _dealerHand.Skip(1).Select(c => c.ToString()));
+            DealerValueLabel.Text = "Hidden, " + string.Join(", ", _dealerHand.Skip(1).Select(c => c.ToString()));
             DealerValueLabel.Text = CalculateHandValue(_dealerHand.Skip(1).ToList()).ToString();
 
             AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
@@ -86,7 +86,7 @@ namespace Casino
             int playerValue = CalculateHandValue(_playerHand);
             int dealerValue = CalculateHandValue(_dealerHand);
 
-            DealerCardsLabel.Text = string.Join(", ", _dealerHand.Select(c => c.ToString()));
+            DealerValueLabel.Text = string.Join(", ", _dealerHand.Select(c => c.ToString()));
             DealerValueLabel.Text = dealerValue.ToString();
 
             if (dealerValue > 21 || playerValue > dealerValue)
@@ -107,7 +107,7 @@ namespace Casino
         {
             if (LoggedInUser != null)
             {
-                UserName_label.Text = LoggedInUser.Username;
+                AmountMoneyLabel.Text = LoggedInUser.Username;
                 AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
 
             }

@@ -2,15 +2,8 @@
 {
     partial class BlackJack_Form
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,221 +13,206 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            Dealbutton = new Button();
-            HitButton = new Button();
-            Stand = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            AmountMoneyLabel = new Label();
-            UserName_label = new Label();
-            imageList1 = new ImageList(components);
+            titleLabel = new Label();
             DealerValueLabel = new Label();
-            PlayerCardsLabel = new Label();
-            DealerCardsLabel = new Label();
             PlayerValueLabel = new Label();
+            AmountMoneyLabel = new Label();
+            betLabel = new Label();
+            betAmountBox = new TextBox();
+            hitButton = new Button();
+            standButton = new Button();
+            dealButton = new Button();
+            backButton = new Button();
+            dealerScoreLabel = new Label();
+            playerScoreLabel = new Label();
             SuspendLayout();
             // 
-            // Dealbutton
+            // titleLabel
             // 
-            Dealbutton.Location = new Point(356, 385);
-            Dealbutton.Name = "Dealbutton";
-            Dealbutton.Size = new Size(75, 23);
-            Dealbutton.TabIndex = 0;
-            Dealbutton.Text = "Dealbutton";
-            Dealbutton.UseVisualStyleBackColor = true;
-            // 
-            // HitButton
-            // 
-            HitButton.Location = new Point(298, 337);
-            HitButton.Name = "HitButton";
-            HitButton.Size = new Size(75, 23);
-            HitButton.TabIndex = 1;
-            HitButton.Text = "Hit";
-            HitButton.UseVisualStyleBackColor = true;
-            HitButton.Click += HitButton_Click;
-            // 
-            // Stand
-            // 
-            Stand.Location = new Point(408, 337);
-            Stand.Name = "Stand";
-            Stand.Size = new Size(75, 23);
-            Stand.TabIndex = 2;
-            Stand.Text = "Stand";
-            Stand.UseVisualStyleBackColor = true;
-            Stand.Click += StandButton_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(713, 245);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(641, 280);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 4;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.Location = new Point(82, 280);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 23);
-            button6.TabIndex = 5;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Location = new Point(12, 245);
-            button7.Name = "button7";
-            button7.Size = new Size(75, 23);
-            button7.TabIndex = 6;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.Location = new Point(161, 314);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 23);
-            button8.TabIndex = 7;
-            button8.Text = "button8";
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            button9.Location = new Point(569, 314);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 8;
-            button9.Text = "button9";
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // AmountMoneyLabel
-            // 
-            AmountMoneyLabel.AutoSize = true;
-            AmountMoneyLabel.Location = new Point(67, -2);
-            AmountMoneyLabel.Name = "AmountMoneyLabel";
-            AmountMoneyLabel.Size = new Size(116, 15);
-            AmountMoneyLabel.TabIndex = 10;
-            AmountMoneyLabel.Text = "AmountMoneyLabel";
-            // 
-            // UserName_label
-            // 
-            UserName_label.AutoSize = true;
-            UserName_label.Location = new Point(-1, -2);
-            UserName_label.Name = "UserName_label";
-            UserName_label.Size = new Size(62, 15);
-            UserName_label.TabIndex = 9;
-            UserName_label.Text = "UserName";
-            // 
-            // imageList1
-            // 
-            imageList1.ColorDepth = ColorDepth.Depth32Bit;
-            imageList1.ImageSize = new Size(16, 16);
-            imageList1.TransparentColor = Color.Transparent;
+            titleLabel.AutoSize = true;
+            titleLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            titleLabel.ForeColor = Color.White;
+            titleLabel.Location = new Point(400, 20);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(190, 37);
+            titleLabel.TabIndex = 0;
+            titleLabel.Text = "♠️ BlackJack ♥️";
             // 
             // DealerValueLabel
             // 
             DealerValueLabel.AutoSize = true;
-            DealerValueLabel.Location = new Point(606, 48);
+            DealerValueLabel.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            DealerValueLabel.ForeColor = Color.White;
+            DealerValueLabel.Location = new Point(450, 80);
             DealerValueLabel.Name = "DealerValueLabel";
-            DealerValueLabel.Size = new Size(96, 15);
-            DealerValueLabel.TabIndex = 13;
-            DealerValueLabel.Text = "DealerValueLabel";
-            // 
-            // PlayerCardsLabel
-            // 
-            PlayerCardsLabel.AutoSize = true;
-            PlayerCardsLabel.Location = new Point(161, 131);
-            PlayerCardsLabel.Name = "PlayerCardsLabel";
-            PlayerCardsLabel.Size = new Size(97, 15);
-            PlayerCardsLabel.TabIndex = 14;
-            PlayerCardsLabel.Text = "PlayerCardsLabel";
-            // 
-            // DealerCardsLabel
-            // 
-            DealerCardsLabel.AutoSize = true;
-            DealerCardsLabel.Location = new Point(161, 48);
-            DealerCardsLabel.Name = "DealerCardsLabel";
-            DealerCardsLabel.Size = new Size(98, 15);
-            DealerCardsLabel.TabIndex = 15;
-            DealerCardsLabel.Text = "DealerCardsLabel";
-            DealerCardsLabel.Click += DealerCardsLabel_Click;
+            DealerValueLabel.Size = new Size(136, 25);
+            DealerValueLabel.TabIndex = 1;
+            DealerValueLabel.Text = "Dealer's Hand";
             // 
             // PlayerValueLabel
             // 
             PlayerValueLabel.AutoSize = true;
-            PlayerValueLabel.Location = new Point(606, 131);
+            PlayerValueLabel.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            PlayerValueLabel.ForeColor = Color.White;
+            PlayerValueLabel.Location = new Point(450, 350);
             PlayerValueLabel.Name = "PlayerValueLabel";
-            PlayerValueLabel.Size = new Size(95, 15);
-            PlayerValueLabel.TabIndex = 16;
-            PlayerValueLabel.Text = "PlayerValueLabel";
+            PlayerValueLabel.Size = new Size(134, 25);
+            PlayerValueLabel.TabIndex = 3;
+            PlayerValueLabel.Text = "Player's Hand";
+            // 
+            // AmountMoneyLabel
+            // 
+            AmountMoneyLabel.AutoSize = true;
+            AmountMoneyLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            AmountMoneyLabel.ForeColor = Color.White;
+            AmountMoneyLabel.Location = new Point(20, 20);
+            AmountMoneyLabel.Name = "AmountMoneyLabel";
+            AmountMoneyLabel.Size = new Size(123, 21);
+            AmountMoneyLabel.TabIndex = 5;
+            AmountMoneyLabel.Text = "Balance: $1000";
+            // 
+            // betLabel
+            // 
+            betLabel.AutoSize = true;
+            betLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            betLabel.ForeColor = Color.White;
+            betLabel.Location = new Point(20, 60);
+            betLabel.Name = "betLabel";
+            betLabel.Size = new Size(105, 21);
+            betLabel.TabIndex = 6;
+            betLabel.Text = "Bet Amount:";
+            // 
+            // betAmountBox
+            // 
+            betAmountBox.BackColor = Color.White;
+            betAmountBox.Font = new Font("Segoe UI", 12F);
+            betAmountBox.ForeColor = Color.Black;
+            betAmountBox.Location = new Point(130, 60);
+            betAmountBox.Name = "betAmountBox";
+            betAmountBox.Size = new Size(100, 29);
+            betAmountBox.TabIndex = 7;
+            // 
+            // hitButton
+            // 
+            hitButton.BackColor = Color.Red;
+            hitButton.Cursor = Cursors.Hand;
+            hitButton.Enabled = false;
+            hitButton.FlatAppearance.BorderSize = 0;
+            hitButton.FlatStyle = FlatStyle.Flat;
+            hitButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            hitButton.ForeColor = Color.White;
+            hitButton.Location = new Point(350, 500);
+            hitButton.Name = "hitButton";
+            hitButton.Size = new Size(100, 40);
+            hitButton.TabIndex = 8;
+            hitButton.Text = "Hit";
+            hitButton.UseVisualStyleBackColor = false;
+            // 
+            // standButton
+            // 
+            standButton.BackColor = Color.Black;
+            standButton.Cursor = Cursors.Hand;
+            standButton.Enabled = false;
+            standButton.FlatAppearance.BorderSize = 0;
+            standButton.FlatStyle = FlatStyle.Flat;
+            standButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            standButton.ForeColor = Color.White;
+            standButton.Location = new Point(460, 500);
+            standButton.Name = "standButton";
+            standButton.Size = new Size(100, 40);
+            standButton.TabIndex = 9;
+            standButton.Text = "Stand";
+            standButton.UseVisualStyleBackColor = false;
+            // 
+            // dealButton
+            // 
+            dealButton.BackColor = Color.FromArgb(0, 100, 0);
+            dealButton.Cursor = Cursors.Hand;
+            dealButton.FlatAppearance.BorderSize = 0;
+            dealButton.FlatStyle = FlatStyle.Flat;
+            dealButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            dealButton.ForeColor = Color.White;
+            dealButton.Location = new Point(570, 500);
+            dealButton.Name = "dealButton";
+            dealButton.Size = new Size(100, 40);
+            dealButton.TabIndex = 10;
+            dealButton.Text = "Deal";
+            dealButton.UseVisualStyleBackColor = false;
+            // 
+            // backButton
+            // 
+            backButton.BackColor = Color.Gray;
+            backButton.Cursor = Cursors.Hand;
+            backButton.FlatAppearance.BorderSize = 0;
+            backButton.FlatStyle = FlatStyle.Flat;
+            backButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            backButton.ForeColor = Color.White;
+            backButton.Location = new Point(20, 500);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(100, 40);
+            backButton.TabIndex = 11;
+            backButton.Text = "← Back";
+            backButton.UseVisualStyleBackColor = false;
+            // 
+            // dealerScoreLabel
+            // 
+            dealerScoreLabel.AutoSize = true;
+            dealerScoreLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            dealerScoreLabel.ForeColor = Color.White;
+            dealerScoreLabel.Location = new Point(465, 110);
+            dealerScoreLabel.Name = "dealerScoreLabel";
+            dealerScoreLabel.Size = new Size(69, 21);
+            dealerScoreLabel.TabIndex = 2;
+            dealerScoreLabel.Text = "Score: 0";
+            // 
+            // playerScoreLabel
+            // 
+            playerScoreLabel.AutoSize = true;
+            playerScoreLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            playerScoreLabel.ForeColor = Color.White;
+            playerScoreLabel.Location = new Point(465, 380);
+            playerScoreLabel.Name = "playerScoreLabel";
+            playerScoreLabel.Size = new Size(69, 21);
+            playerScoreLabel.TabIndex = 4;
+            playerScoreLabel.Text = "Score: 0";
             // 
             // BlackJack_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(PlayerValueLabel);
-            Controls.Add(DealerCardsLabel);
-            Controls.Add(PlayerCardsLabel);
+            BackColor = Color.DarkGreen;
+            ClientSize = new Size(1000, 600);
+            Controls.Add(titleLabel);
             Controls.Add(DealerValueLabel);
+            Controls.Add(dealerScoreLabel);
+            Controls.Add(PlayerValueLabel);
+            Controls.Add(playerScoreLabel);
             Controls.Add(AmountMoneyLabel);
-            Controls.Add(UserName_label);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(Stand);
-            Controls.Add(HitButton);
-            Controls.Add(Dealbutton);
+            Controls.Add(betLabel);
+            Controls.Add(betAmountBox);
+            Controls.Add(hitButton);
+            Controls.Add(standButton);
+            Controls.Add(dealButton);
+            Controls.Add(backButton);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "BlackJack_Form";
-            Text = "BlackJack_Form";
-            Load += BlackJack_Form_Load;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "BlackJack";
             ResumeLayout(false);
             PerformLayout();
         }
 
-        #endregion
-
-        private Button Dealbutton;
-        private Button HitButton;
-        private Button Stand;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Label AmountMoneyLabel;
-        private Label UserName_label;
-        private ImageList imageList1;
+        private Label titleLabel;
         private Label DealerValueLabel;
-        private Label PlayerCardsLabel;
-        private Label DealerCardsLabel;
         private Label PlayerValueLabel;
+        private Label AmountMoneyLabel;
+        private Label betLabel;
+        private TextBox betAmountBox;
+        private Button hitButton;
+        private Button standButton;
+        private Button dealButton;
+        private Button backButton;
+        private Label dealerScoreLabel;
+        private Label playerScoreLabel;
     }
 }

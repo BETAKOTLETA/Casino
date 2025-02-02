@@ -2,15 +2,8 @@
 {
     partial class Casino_Form
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,90 +13,85 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            ToBlackJackbutton = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            titleLabel = new Label();
             UserName_label = new Label();
             AmountMoneyLabel = new Label();
+            ToBlackJackbutton = new Button();
             SuspendLayout();
             // 
-            // ToBlackJackbutton
+            // titleLabel
             // 
-            ToBlackJackbutton.Location = new Point(355, 91);
-            ToBlackJackbutton.Name = "ToBlackJackbutton";
-            ToBlackJackbutton.Size = new Size(75, 23);
-            ToBlackJackbutton.TabIndex = 0;
-            ToBlackJackbutton.Text = "BlackJack";
-            ToBlackJackbutton.UseVisualStyleBackColor = true;
-            ToBlackJackbutton.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(389, 169);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(355, 269);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            titleLabel.AutoSize = true;
+            titleLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            titleLabel.ForeColor = Color.Black;
+            titleLabel.Location = new Point(300, 20);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(23, 30);
+            titleLabel.TabIndex = 0;
+            titleLabel.Text = "s";
             // 
             // UserName_label
             // 
             UserName_label.AutoSize = true;
-            UserName_label.Location = new Point(22, 15);
+            UserName_label.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            UserName_label.ForeColor = Color.Black;
+            UserName_label.Location = new Point(20, 20);
             UserName_label.Name = "UserName_label";
-            UserName_label.Size = new Size(62, 15);
-            UserName_label.TabIndex = 3;
-            UserName_label.Text = "UserName";
+            UserName_label.Size = new Size(15, 19);
+            UserName_label.TabIndex = 1;
+            UserName_label.Text = "s";
             // 
             // AmountMoneyLabel
             // 
             AmountMoneyLabel.AutoSize = true;
-            AmountMoneyLabel.Location = new Point(90, 15);
+            AmountMoneyLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            AmountMoneyLabel.ForeColor = Color.Black;
+            AmountMoneyLabel.Location = new Point(20, 50);
             AmountMoneyLabel.Name = "AmountMoneyLabel";
-            AmountMoneyLabel.Size = new Size(116, 15);
-            AmountMoneyLabel.TabIndex = 4;
-            AmountMoneyLabel.Text = "AmountMoneyLabel";
+            AmountMoneyLabel.Size = new Size(17, 21);
+            AmountMoneyLabel.TabIndex = 2;
+            AmountMoneyLabel.Text = "s";
+            // 
+            // ToBlackJackbutton
+            // 
+            ToBlackJackbutton.BackColor = Color.Red;
+            ToBlackJackbutton.Cursor = Cursors.Hand;
+            ToBlackJackbutton.FlatAppearance.BorderSize = 0;
+            ToBlackJackbutton.FlatStyle = FlatStyle.Flat;
+            ToBlackJackbutton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            ToBlackJackbutton.ForeColor = Color.White;
+            ToBlackJackbutton.Location = new Point(100, 150);
+            ToBlackJackbutton.Name = "ToBlackJackbutton";
+            ToBlackJackbutton.Size = new Size(180, 40);
+            ToBlackJackbutton.TabIndex = 3;
+            ToBlackJackbutton.Text = "s";
+            ToBlackJackbutton.UseVisualStyleBackColor = false;
+            ToBlackJackbutton.Click += button1_Click;
             // 
             // Casino_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 450);
-            Controls.Add(AmountMoneyLabel);
+            Controls.Add(titleLabel);
             Controls.Add(UserName_label);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(AmountMoneyLabel);
             Controls.Add(ToBlackJackbutton);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Casino_Form";
-            Text = "Casino_Form";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Casino";
             Load += Casino_Form_Load;
             ResumeLayout(false);
             PerformLayout();
         }
-
-        #endregion
 
         private Button ToBlackJackbutton;
         private Button button2;
         private Button button3;
         private Label UserName_label;
         private Label AmountMoneyLabel;
+        private Label titleLabel;
     }
 }

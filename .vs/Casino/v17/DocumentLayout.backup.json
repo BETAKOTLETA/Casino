@@ -1,46 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\Casino\\",
+  "WorkspaceRootPath": "D:\\cas\\casik\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|c:\\users\\admin\\source\\repos\\casino\\casino\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|D:\\cas\\casik\\casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|c:\\users\\admin\\source\\repos\\casino\\casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\high-low.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\high-low.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|C:\\Users\\Admin\\source\\repos\\Casino\\casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\coin flip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\coin flip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|c:\\users\\admin\\source\\repos\\casino\\casino\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|c:\\users\\admin\\source\\repos\\casino\\casino\\login_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\login_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|c:\\users\\admin\\source\\repos\\casino\\casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|C:\\Users\\Admin\\source\\repos\\Casino\\casino\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|D:\\cas\\casik\\casino\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|c:\\users\\admin\\source\\repos\\casino\\casino\\casino_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\login_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\casino_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\casino_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|c:\\users\\admin\\source\\repos\\casino\\casino\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\blackjack_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\blackjack_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|C:\\Users\\Admin\\source\\repos\\Casino\\casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\casino_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|D:\\cas\\casik\\casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\blackjack_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\login_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\login_form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|d:\\cas\\casik\\casino\\casino.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3A89D8A1-BE84-4C5D-A7CE-16C783465E41}|Casino\\Casino.csproj|solutionrelative:casino\\casino.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,29 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Casino_Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino_Form.cs",
-              "RelativeDocumentMoniker": "Casino\\Casino_Form.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino_Form.cs [Design]",
-              "RelativeToolTip": "Casino\\Casino_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:53:14.638Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:5:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
@@ -82,102 +69,54 @@
               "Name": "ST:2:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login_Form.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.Designer.cs",
-              "RelativeDocumentMoniker": "Casino\\Login_Form.Designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.Designer.cs",
-              "RelativeToolTip": "Casino\\Login_Form.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T11:55:12.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Casino_Form.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino_Form.Designer.cs",
-              "RelativeDocumentMoniker": "Casino\\Casino_Form.Designer.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino_Form.Designer.cs",
-              "RelativeToolTip": "Casino\\Casino_Form.Designer.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAADwv0gAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T01:22:13.09Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BlackJack_Form.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\BlackJack_Form.cs",
-              "RelativeDocumentMoniker": "Casino\\BlackJack_Form.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\BlackJack_Form.cs",
-              "RelativeToolTip": "Casino\\BlackJack_Form.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAGMAAAA5AAAAAAAAAA==",
+              "Title": "High-Low.cs [Design]",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\High-Low.cs",
+              "RelativeDocumentMoniker": "Casino\\High-Low.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\High-Low.cs [Design]",
+              "RelativeToolTip": "Casino\\High-Low.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T01:56:03.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Casino\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Models\\User.cs",
-              "RelativeToolTip": "Casino\\Models\\User.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T01:09:57.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Program.cs",
-              "RelativeDocumentMoniker": "Casino\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Program.cs",
-              "RelativeToolTip": "Casino\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T12:49:48.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login_Form.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.cs",
-              "RelativeDocumentMoniker": "Casino\\Login_Form.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.cs",
-              "RelativeToolTip": "Casino\\Login_Form.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAwwHgAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T16:06:32.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Login_Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.cs",
-              "RelativeDocumentMoniker": "Casino\\Login_Form.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Login_Form.cs [Design]",
-              "RelativeToolTip": "Casino\\Login_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:53:22.951Z",
+              "WhenOpened": "2025-02-02T18:40:12.741Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Coin Flip.cs [Design]",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Coin Flip.cs",
+              "RelativeDocumentMoniker": "Casino\\Coin Flip.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Coin Flip.cs [Design]",
+              "RelativeToolTip": "Casino\\Coin Flip.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T18:40:09.778Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login_Form.cs",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Casino\\Login_Form.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Login_Form.cs",
+              "RelativeToolTip": "Casino\\Login_Form.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAawIIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T18:00:58.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Casino_Form.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino_Form.cs",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Casino_Form.cs",
               "RelativeDocumentMoniker": "Casino\\Casino_Form.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino_Form.cs",
-              "RelativeToolTip": "Casino\\Casino_Form.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Casino_Form.cs*",
+              "RelativeToolTip": "Casino\\Casino_Form.cs*",
               "ViewState": "AgIAAAIAAAAAAAAAAADwvxkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-01T15:18:04.982Z",
@@ -185,15 +124,100 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "Casino_Form.Designer.cs",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Casino_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Casino\\Casino_Form.Designer.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Casino_Form.Designer.cs*",
+              "RelativeToolTip": "Casino\\Casino_Form.Designer.cs*",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAswEYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T01:22:13.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login_Form.cs [Design]",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Login_Form.cs",
+              "RelativeDocumentMoniker": "Casino\\Login_Form.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Login_Form.cs [Design]",
+              "RelativeToolTip": "Casino\\Login_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:53:22.951Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "BlackJack_Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\BlackJack_Form.cs",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\BlackJack_Form.cs",
               "RelativeDocumentMoniker": "Casino\\BlackJack_Form.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\BlackJack_Form.cs [Design]",
+              "ToolTip": "D:\\cas\\casik\\Casino\\BlackJack_Form.cs [Design]",
               "RelativeToolTip": "Casino\\BlackJack_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T01:05:05.774Z",
+              "WhenOpened": "2025-02-02T01:05:05.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Casino_Form.cs [Design]",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Casino_Form.cs",
+              "RelativeDocumentMoniker": "Casino\\Casino_Form.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Casino_Form.cs [Design]*",
+              "RelativeToolTip": "Casino\\Casino_Form.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:53:14.638Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login_Form.Designer.cs",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Login_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Casino\\Login_Form.Designer.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Login_Form.Designer.cs",
+              "RelativeToolTip": "Casino\\Login_Form.Designer.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAuwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T11:55:12.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BlackJack_Form.Designer.cs",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\BlackJack_Form.Designer.cs",
+              "RelativeDocumentMoniker": "Casino\\BlackJack_Form.Designer.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\BlackJack_Form.Designer.cs",
+              "RelativeToolTip": "Casino\\BlackJack_Form.Designer.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T13:47:06.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BlackJack_Form.cs",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\BlackJack_Form.cs",
+              "RelativeDocumentMoniker": "Casino\\BlackJack_Form.cs",
+              "ToolTip": "D:\\cas\\casik\\Casino\\BlackJack_Form.cs",
+              "RelativeToolTip": "Casino\\BlackJack_Form.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T01:56:03.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Casino.csproj",
+              "DocumentMoniker": "D:\\cas\\casik\\Casino\\Casino.csproj",
+              "RelativeDocumentMoniker": "Casino\\Casino.csproj",
+              "ToolTip": "D:\\cas\\casik\\Casino\\Casino.csproj",
+              "RelativeToolTip": "Casino\\Casino.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-02T16:14:13.377Z"
             }
           ]
         }
