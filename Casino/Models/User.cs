@@ -14,7 +14,7 @@ namespace Casino.Models
         public string Username { get; set; }
         public decimal Money { get; set; }
         public bool IsAdmin { get; set; }
-        private readonly string connectionString = "Server=DESKTOP-C7TE4MK;Database=UserApp3;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true";
+        private readonly string connectionString = "Server=DESKTOP-C7TE4MK\\SQLEXPRESS;Database=UserApp3;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true";
 
         public User(int id, string username, decimal money, bool isAdmin = false)
         {
@@ -58,6 +58,30 @@ namespace Casino.Models
             }
         }
     }
+    public class Bet()
+    {
+        private const int StartBet = 0;
+        private const int MinBet = 5;
+        private const int MaxBet = 100000;
+        public int Amount { get; set; }
+
+        public Bet(int amount) : this()
+        {
+            if (amount < MinBet || amount > MaxBet)
+            {
+                throw new ArgumentOutOfRangeException(nameof(amount), $"Bet amount must be between {MinBet} and {MaxBet}.");
+            }
+            Amount = amount;
+        }
+        public void ChangeBet(int value)
+        {
+            Amount += value;
+            //return 0;
+        }
+
+
+    }
+
     public class Card
     {
         public string Suit { get; set; }
@@ -76,6 +100,7 @@ namespace Casino.Models
             return $"{Rank} of {Suit}";
         }
     }
+
     public class Deck
     {
         public List<Card> Cards { get; private set; }

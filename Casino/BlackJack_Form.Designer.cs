@@ -32,12 +32,12 @@
             Dealbutton = new Button();
             HitButton = new Button();
             Stand = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
+            onehudreddollarbetbutton = new Button();
+            fivezerodollarbetbutton = new Button();
+            fivedollarbetbutton = new Button();
+            onedollarbetbutton = new Button();
+            tendollarbetbutton = new Button();
+            twofivedollarbetbutton = new Button();
             AmountMoneyLabel = new Label();
             UserName_label = new Label();
             imageList1 = new ImageList(components);
@@ -45,6 +45,8 @@
             PlayerCardsLabel = new Label();
             DealerCardsLabel = new Label();
             PlayerValueLabel = new Label();
+            TotalBetLabel = new Label();
+            Clearbetbutton = new Button();
             SuspendLayout();
             // 
             // Dealbutton
@@ -53,7 +55,7 @@
             Dealbutton.Name = "Dealbutton";
             Dealbutton.Size = new Size(75, 23);
             Dealbutton.TabIndex = 0;
-            Dealbutton.Text = "Dealbutton";
+            Dealbutton.Text = "Deal";
             Dealbutton.UseVisualStyleBackColor = true;
             // 
             // HitButton
@@ -76,59 +78,59 @@
             Stand.UseVisualStyleBackColor = true;
             Stand.Click += StandButton_Click;
             // 
-            // button4
+            // onehudreddollarbetbutton
             // 
-            button4.Location = new Point(713, 245);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 3;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            onehudreddollarbetbutton.Location = new Point(713, 245);
+            onehudreddollarbetbutton.Name = "onehudreddollarbetbutton";
+            onehudreddollarbetbutton.Size = new Size(75, 23);
+            onehudreddollarbetbutton.TabIndex = 3;
+            onehudreddollarbetbutton.Text = "100$";
+            onehudreddollarbetbutton.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // fivezerodollarbetbutton
             // 
-            button5.Location = new Point(641, 280);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 4;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            fivezerodollarbetbutton.Location = new Point(641, 280);
+            fivezerodollarbetbutton.Name = "fivezerodollarbetbutton";
+            fivezerodollarbetbutton.Size = new Size(75, 23);
+            fivezerodollarbetbutton.TabIndex = 4;
+            fivezerodollarbetbutton.Text = "50$";
+            fivezerodollarbetbutton.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // fivedollarbetbutton
             // 
-            button6.Location = new Point(82, 280);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 23);
-            button6.TabIndex = 5;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            fivedollarbetbutton.Location = new Point(82, 280);
+            fivedollarbetbutton.Name = "fivedollarbetbutton";
+            fivedollarbetbutton.Size = new Size(75, 23);
+            fivedollarbetbutton.TabIndex = 5;
+            fivedollarbetbutton.Text = "5$";
+            fivedollarbetbutton.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // onedollarbetbutton
             // 
-            button7.Location = new Point(12, 245);
-            button7.Name = "button7";
-            button7.Size = new Size(75, 23);
-            button7.TabIndex = 6;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            onedollarbetbutton.Location = new Point(12, 245);
+            onedollarbetbutton.Name = "onedollarbetbutton";
+            onedollarbetbutton.Size = new Size(75, 23);
+            onedollarbetbutton.TabIndex = 6;
+            onedollarbetbutton.Text = "1$";
+            onedollarbetbutton.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // tendollarbetbutton
             // 
-            button8.Location = new Point(161, 314);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 23);
-            button8.TabIndex = 7;
-            button8.Text = "button8";
-            button8.UseVisualStyleBackColor = true;
+            tendollarbetbutton.Location = new Point(161, 314);
+            tendollarbetbutton.Name = "tendollarbetbutton";
+            tendollarbetbutton.Size = new Size(75, 23);
+            tendollarbetbutton.TabIndex = 7;
+            tendollarbetbutton.Text = "10$";
+            tendollarbetbutton.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // twofivedollarbetbutton
             // 
-            button9.Location = new Point(569, 314);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 23);
-            button9.TabIndex = 8;
-            button9.Text = "button9";
-            button9.UseVisualStyleBackColor = true;
+            twofivedollarbetbutton.Location = new Point(569, 314);
+            twofivedollarbetbutton.Name = "twofivedollarbetbutton";
+            twofivedollarbetbutton.Size = new Size(75, 23);
+            twofivedollarbetbutton.TabIndex = 8;
+            twofivedollarbetbutton.Text = "25$";
+            twofivedollarbetbutton.UseVisualStyleBackColor = true;
             // 
             // AmountMoneyLabel
             // 
@@ -191,23 +193,43 @@
             PlayerValueLabel.TabIndex = 16;
             PlayerValueLabel.Text = "PlayerValueLabel";
             // 
+            // TotalBetLabel
+            // 
+            TotalBetLabel.AutoSize = true;
+            TotalBetLabel.Location = new Point(12, 357);
+            TotalBetLabel.Name = "TotalBetLabel";
+            TotalBetLabel.Size = new Size(77, 15);
+            TotalBetLabel.TabIndex = 17;
+            TotalBetLabel.Text = "TotalBetLabel";
+            // 
+            // Clearbetbutton
+            // 
+            Clearbetbutton.Location = new Point(12, 385);
+            Clearbetbutton.Name = "Clearbetbutton";
+            Clearbetbutton.Size = new Size(75, 23);
+            Clearbetbutton.TabIndex = 18;
+            Clearbetbutton.Text = "Clear bet";
+            Clearbetbutton.UseVisualStyleBackColor = true;
+            // 
             // BlackJack_Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(Clearbetbutton);
+            Controls.Add(TotalBetLabel);
             Controls.Add(PlayerValueLabel);
             Controls.Add(DealerCardsLabel);
             Controls.Add(PlayerCardsLabel);
             Controls.Add(DealerValueLabel);
             Controls.Add(AmountMoneyLabel);
             Controls.Add(UserName_label);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(twofivedollarbetbutton);
+            Controls.Add(tendollarbetbutton);
+            Controls.Add(onedollarbetbutton);
+            Controls.Add(fivedollarbetbutton);
+            Controls.Add(fivezerodollarbetbutton);
+            Controls.Add(onehudreddollarbetbutton);
             Controls.Add(Stand);
             Controls.Add(HitButton);
             Controls.Add(Dealbutton);
@@ -223,12 +245,12 @@
         private Button Dealbutton;
         private Button HitButton;
         private Button Stand;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
+        private Button onehudreddollarbetbutton;
+        private Button fivezerodollarbetbutton;
+        private Button fivedollarbetbutton;
+        private Button onedollarbetbutton;
+        private Button tendollarbetbutton;
+        private Button twofivedollarbetbutton;
         private Label AmountMoneyLabel;
         private Label UserName_label;
         private ImageList imageList1;
@@ -236,5 +258,7 @@
         private Label PlayerCardsLabel;
         private Label DealerCardsLabel;
         private Label PlayerValueLabel;
+        private Label TotalBetLabel;
+        private Button Clearbetbutton;
     }
 }
