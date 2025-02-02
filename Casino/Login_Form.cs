@@ -11,8 +11,7 @@ namespace Casino
 {
     public partial class Login_Form : Form
     {
-        private readonly string connectionString = "Server=tcp:servernotcool.database.windows.net,1433;Initial Catalog=Databasecool;Persist Security Info=False;User ID=Adminviktor;Password=c1c224b03cd9bc7b6a86d77f5dace40191766c485cd55dc48caf9ac873335d6f_;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
+        private readonly string connectionString = "Server=DESKTOP-C7TE4MK;Database=UserApp3;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true";
 
         public Login_Form()
         {
@@ -77,7 +76,7 @@ namespace Casino
             }
             catch (SqlException ex)
             {
-                if (ex.Number == 2627) 
+                if (ex.Number == 2627)
                 {
                     MessageBox.Show("Username already exists. Please choose a different one.");
                 }
@@ -119,7 +118,7 @@ namespace Casino
                                 int userId = reader.GetInt32(reader.GetOrdinal("Id"));
                                 string storedHash = reader["PasswordHash"].ToString();
                                 bool isAdmin = reader.GetBoolean(reader.GetOrdinal("Is_Admin"));
-                                decimal Money = reader.GetDecimal(reader.GetOrdinal("Money")); 
+                                decimal Money = reader.GetInt32(reader.GetOrdinal("Money"));
 
                                 if (VerifyPassword(storedHash, userPassword))
                                 {

@@ -163,3 +163,5 @@ D:\cas\casik\Casino\obj\Debug\net8.0-windows\Casino.High_Low.resources
 D:\cas\casik\Casino\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
 D:\cas\casik\Casino\bin\Debug\net8.0-windows\System.Text.Json.dll
 D:\cas\casik\Casino\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\cas\casik\Casino\obj\Debug\net8.0-windows\Casino.Coin Flip.resources
+D:\cas\casik\Casino\obj\Debug\net8.0-windows\Casino.CoinFlipForm.resources
