@@ -3,15 +3,13 @@ using Microsoft.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using System;
 using Casino.Models;
-
 
 namespace Casino
 {
     public partial class Login_Form : Form
     {
-        private readonly string connectionString = "Server=DESKTOP-C7TE4MK;Database=UserApp3;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true";
+        private readonly string connectionString = "Server=tcp:servernotcool.database.windows.net,1433;Initial Catalog=Databasecool;Persist Security Info=False;User ID=Adminviktor;Password=c1c224b03cd9bc7b6a86d77f5dace40191766c485cd55dc48caf9ac873335d6f_;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public Login_Form()
         {
@@ -58,7 +56,7 @@ namespace Casino
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.Add(new SqlParameter("@Username", System.Data.SqlDbType.NVarChar, 50)).Value = userName;
-                        command.Parameters.Add(new SqlParameter("@PasswordHash", System.Data.SqlDbType.NVarChar, 256)).Value = hashedPassword;
+                        command.Parameters.Add(new SqlParameter("@PasswordHash", System.Data.SqlDbType.NVarChar, 64)).Value = hashedPassword;
                         command.Parameters.Add(new SqlParameter("@Money", System.Data.SqlDbType.Int)).Value = 2000;
 
                         int rowsAffected = command.ExecuteNonQuery();
@@ -76,7 +74,7 @@ namespace Casino
             }
             catch (SqlException ex)
             {
-                if (ex.Number == 2627) 
+                if (ex.Number == 2627)
                 {
                     MessageBox.Show("Username already exists. Please choose a different one.");
                 }
@@ -114,18 +112,16 @@ namespace Casino
                         {
                             if (reader.Read())
                             {
-
                                 int userId = reader.GetInt32(reader.GetOrdinal("Id"));
                                 string storedHash = reader["PasswordHash"].ToString();
                                 bool isAdmin = reader.GetBoolean(reader.GetOrdinal("Is_Admin"));
-                                decimal Money = reader.GetInt32(reader.GetOrdinal("Money")); 
+                                decimal money = reader.GetDecimal(reader.GetOrdinal("Money")); 
 
                                 if (VerifyPassword(storedHash, userPassword))
                                 {
                                     MessageBox.Show("Login Successful!");
 
-
-                                    var loggedInUser = new User(userId, userName, Money, isAdmin);
+                                    var loggedInUser = new User(userId, userName, money, isAdmin);
 
                                     Casino_Form form = new Casino_Form();
                                     form.LoggedInUser = loggedInUser;

@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             Dealbutton = new Button();
             HitButton = new Button();
-            Stand = new Button();
+            StandButton = new Button();
             onehudreddollarbetbutton = new Button();
             fivezerodollarbetbutton = new Button();
             fivedollarbetbutton = new Button();
@@ -47,6 +47,7 @@
             PlayerValueLabel = new Label();
             TotalBetLabel = new Label();
             Clearbetbutton = new Button();
+            BackToCasinoButton = new Button();
             SuspendLayout();
             // 
             // Dealbutton
@@ -57,6 +58,7 @@
             Dealbutton.TabIndex = 0;
             Dealbutton.Text = "Deal";
             Dealbutton.UseVisualStyleBackColor = true;
+            Dealbutton.Click += Dealbutton_Click;
             // 
             // HitButton
             // 
@@ -68,15 +70,15 @@
             HitButton.UseVisualStyleBackColor = true;
             HitButton.Click += HitButton_Click;
             // 
-            // Stand
+            // StandButton
             // 
-            Stand.Location = new Point(408, 337);
-            Stand.Name = "Stand";
-            Stand.Size = new Size(75, 23);
-            Stand.TabIndex = 2;
-            Stand.Text = "Stand";
-            Stand.UseVisualStyleBackColor = true;
-            Stand.Click += StandButton_Click;
+            StandButton.Location = new Point(423, 337);
+            StandButton.Name = "StandButton";
+            StandButton.Size = new Size(75, 23);
+            StandButton.TabIndex = 2;
+            StandButton.Text = "Stand";
+            StandButton.UseVisualStyleBackColor = true;
+            StandButton.Click += StandButton_Click;
             // 
             // onehudreddollarbetbutton
             // 
@@ -86,6 +88,7 @@
             onehudreddollarbetbutton.TabIndex = 3;
             onehudreddollarbetbutton.Text = "100$";
             onehudreddollarbetbutton.UseVisualStyleBackColor = true;
+            onehudreddollarbetbutton.Click += onehudreddollarbetbutton_Click;
             // 
             // fivezerodollarbetbutton
             // 
@@ -95,6 +98,7 @@
             fivezerodollarbetbutton.TabIndex = 4;
             fivezerodollarbetbutton.Text = "50$";
             fivezerodollarbetbutton.UseVisualStyleBackColor = true;
+            fivezerodollarbetbutton.Click += fivezerodollarbetbutton_Click;
             // 
             // fivedollarbetbutton
             // 
@@ -104,6 +108,7 @@
             fivedollarbetbutton.TabIndex = 5;
             fivedollarbetbutton.Text = "5$";
             fivedollarbetbutton.UseVisualStyleBackColor = true;
+            fivedollarbetbutton.Click += fivedollarbetbutton_Click;
             // 
             // onedollarbetbutton
             // 
@@ -113,6 +118,7 @@
             onedollarbetbutton.TabIndex = 6;
             onedollarbetbutton.Text = "1$";
             onedollarbetbutton.UseVisualStyleBackColor = true;
+            onedollarbetbutton.Click += onedollarbetbutton_Click;
             // 
             // tendollarbetbutton
             // 
@@ -122,15 +128,17 @@
             tendollarbetbutton.TabIndex = 7;
             tendollarbetbutton.Text = "10$";
             tendollarbetbutton.UseVisualStyleBackColor = true;
+            tendollarbetbutton.Click += tendollarbetbutton_Click;
             // 
             // twofivedollarbetbutton
             // 
-            twofivedollarbetbutton.Location = new Point(569, 314);
+            twofivedollarbetbutton.Location = new Point(573, 314);
             twofivedollarbetbutton.Name = "twofivedollarbetbutton";
             twofivedollarbetbutton.Size = new Size(75, 23);
             twofivedollarbetbutton.TabIndex = 8;
             twofivedollarbetbutton.Text = "25$";
             twofivedollarbetbutton.UseVisualStyleBackColor = true;
+            twofivedollarbetbutton.Click += twofivedollarbetbutton_Click;
             // 
             // AmountMoneyLabel
             // 
@@ -210,12 +218,24 @@
             Clearbetbutton.TabIndex = 18;
             Clearbetbutton.Text = "Clear bet";
             Clearbetbutton.UseVisualStyleBackColor = true;
+            Clearbetbutton.Click += Clearbetbutton_Click;
+            // 
+            // BackToCasinoButton
+            // 
+            BackToCasinoButton.Location = new Point(-1, 16);
+            BackToCasinoButton.Name = "BackToCasinoButton";
+            BackToCasinoButton.Size = new Size(75, 23);
+            BackToCasinoButton.TabIndex = 19;
+            BackToCasinoButton.Text = "Back";
+            BackToCasinoButton.UseVisualStyleBackColor = true;
+            BackToCasinoButton.Click += BackToCasinoButton_Click;
             // 
             // BlackJack_Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BackToCasinoButton);
             Controls.Add(Clearbetbutton);
             Controls.Add(TotalBetLabel);
             Controls.Add(PlayerValueLabel);
@@ -230,7 +250,7 @@
             Controls.Add(fivedollarbetbutton);
             Controls.Add(fivezerodollarbetbutton);
             Controls.Add(onehudreddollarbetbutton);
-            Controls.Add(Stand);
+            Controls.Add(StandButton);
             Controls.Add(HitButton);
             Controls.Add(Dealbutton);
             Name = "BlackJack_Form";
@@ -244,7 +264,7 @@
 
         private Button Dealbutton;
         private Button HitButton;
-        private Button Stand;
+        private Button StandButton;
         private Button onehudreddollarbetbutton;
         private Button fivezerodollarbetbutton;
         private Button fivedollarbetbutton;
@@ -260,5 +280,6 @@
         private Label PlayerValueLabel;
         private Label TotalBetLabel;
         private Button Clearbetbutton;
+        private Button BackToCasinoButton;
     }
 }

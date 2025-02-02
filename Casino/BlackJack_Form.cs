@@ -17,13 +17,17 @@ namespace Casino
         private List<Card> _playerHand;
         private List<Card> _dealerHand;
         public User LoggedInUser { get; set; }
-        private int bet = 50;
+
+        Bet bet;
+
+        Game game = new Game();
 
         public BlackJack_Form(User loggedInUser)
         {
             InitializeComponent();
             LoggedInUser = loggedInUser;
-            InitializeGame();
+            bet = new Bet(0, LoggedInUser);
+
         }
 
         private void InitializeGame()
@@ -42,17 +46,22 @@ namespace Casino
 
         private void UpdateUI()
         {
-            PlayerCardsLabel.Text = string.Join(", ", _playerHand.Select(c => c.ToString()));
-            PlayerValueLabel.Text = CalculateHandValue(_playerHand).ToString();
+            PlayerCardsLabel.Text = "Player cards: " + string.Join(", ", _playerHand.Select(c => c.ToString()));
+            PlayerValueLabel.Text = "Value: " + CalculateHandValue(_playerHand).ToString();
 
-            DealerCardsLabel.Text = "Hidden, " + string.Join(", ", _dealerHand.Skip(1).Select(c => c.ToString()));
-            DealerValueLabel.Text = CalculateHandValue(_dealerHand.Skip(1).ToList()).ToString();
+            DealerCardsLabel.Text = "Dealer cards: Hidden, " + string.Join(", ", _dealerHand.Skip(1).Select(c => c.ToString()));
+            DealerValueLabel.Text = "Value: " + CalculateHandValue(_dealerHand.Skip(1).ToList()).ToString();
 
             AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
         }
 
         private int CalculateHandValue(List<Card> hand)
         {
+            if (hand == null)
+            {
+                throw new ArgumentNullException(nameof(hand), "Hand cannot be null.");
+            }
+
             int value = hand.Sum(c => c.Value);
             int aceCount = hand.Count(c => c.Rank == "Ace");
 
@@ -72,11 +81,23 @@ namespace Casino
             if (CalculateHandValue(_playerHand) > 21)
             {
                 MessageBox.Show("Bust! You lose.");
-                InitializeGame();
+
+                bet.Reset();
+                TotalBetLabel.Text = "0";
+
+                ShowBetButtons();
+
+                HitButton.Visible = false;
+                StandButton.Visible = false;
+
+                Dealbutton.Visible = true;
+
+                DontShowPlayerandDealer();
+
             }
         }
 
-        private void StandButton_Click(object sender, EventArgs e)
+        private async void StandButton_Click(object sender, EventArgs e)
         {
             while (CalculateHandValue(_dealerHand) < 17)
             {
@@ -89,18 +110,37 @@ namespace Casino
             DealerCardsLabel.Text = string.Join(", ", _dealerHand.Select(c => c.ToString()));
             DealerValueLabel.Text = dealerValue.ToString();
 
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+
             if (dealerValue > 21 || playerValue > dealerValue)
             {
                 MessageBox.Show("You win!");
-                LoggedInUser.UpdateToDataBaseMoney(bet);
+
+                game.WinBet(bet, LoggedInUser);
+            }
+            else if (playerValue == dealerValue)
+            {
+                MessageBox.Show("Draw!");
             }
             else
             {
                 MessageBox.Show("Dealer wins!");
-                LoggedInUser.UpdateToDataBaseMoney(-bet);
+                game.LoseBet(bet, LoggedInUser);
             }
 
-            InitializeGame();
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+
+            bet.Reset();
+            TotalBetLabel.Text = "0";
+
+            ShowBetButtons();
+
+            HitButton.Visible = false;
+            StandButton.Visible = false;
+
+            Dealbutton.Visible = true;
+
+            DontShowPlayerandDealer();
         }
 
         private void BlackJack_Form_Load(object sender, EventArgs e)
@@ -109,6 +149,11 @@ namespace Casino
             {
                 UserName_label.Text = LoggedInUser.Username;
                 AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+                HitButton.Visible = false;
+                StandButton.Visible = false;
+
+                DontShowPlayerandDealer();
+
 
             }
         }
@@ -117,5 +162,126 @@ namespace Casino
         {
 
         }
+
+        private void onedollarbetbutton_Click(object sender, EventArgs e)
+        {
+            bet.ChangeBet(1, TotalBetLabel);
+
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+        }
+
+        private void fivedollarbetbutton_Click(object sender, EventArgs e)
+        {
+            bet.ChangeBet(5, TotalBetLabel);
+
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+        }
+
+        private void tendollarbetbutton_Click(object sender, EventArgs e)
+        {
+            bet.ChangeBet(10, TotalBetLabel);
+
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+        }
+
+        private void twofivedollarbetbutton_Click(object sender, EventArgs e)
+        {
+            bet.ChangeBet(25, TotalBetLabel);
+
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+        }
+
+        private void fivezerodollarbetbutton_Click(object sender, EventArgs e)
+        {
+            bet.ChangeBet(50, TotalBetLabel);
+
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+        }
+
+        private void onehudreddollarbetbutton_Click(object sender, EventArgs e)
+        {
+            bet.ChangeBet(100, TotalBetLabel);
+
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+        }
+
+        private void Dealbutton_Click(object sender, EventArgs e)
+        {
+            if (bet.Amount > LoggedInUser.Money)
+            {
+                MessageBox.Show("You don't have enough money to place this bet!");
+                return;
+            }
+            if (bet.Amount == 0)
+            {
+                MessageBox.Show("You need to place a bet first!");
+                return;
+            }
+
+            LoggedInUser.UpdateToDataBaseMoney(-bet.Amount);
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+
+            InitializeGame();
+
+            HitButton.Visible = true;
+            StandButton.Visible = true;
+
+            Dealbutton.Visible = false;
+
+            Clearbetbutton.Visible = false;
+            BackToCasinoButton.Visible = false;
+
+            onedollarbetbutton.Visible = false;
+            fivedollarbetbutton.Visible = false;
+            tendollarbetbutton.Visible = false;
+            twofivedollarbetbutton.Visible = false;
+            fivezerodollarbetbutton.Visible = false;
+            onehudreddollarbetbutton.Visible = false;
+
+            PlayerCardsLabel.Visible = true;
+            PlayerValueLabel.Visible = true;
+            DealerCardsLabel.Visible = true;
+            DealerValueLabel.Visible = true;
+
+
+
+            AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+            TotalBetLabel.Text = bet.Amount.ToString("C");
+        }
+        private void ShowBetButtons()
+        {
+            onedollarbetbutton.Visible = true;
+            fivedollarbetbutton.Visible = true;
+            tendollarbetbutton.Visible = true;
+            twofivedollarbetbutton.Visible = true;
+            fivezerodollarbetbutton.Visible = true;
+            onehudreddollarbetbutton.Visible = true;
+
+            BackToCasinoButton.Visible = true;
+            Clearbetbutton.Visible = true;
+        }
+        private void DontShowPlayerandDealer()
+        {
+            PlayerCardsLabel.Visible = false;
+            PlayerValueLabel.Visible = false;
+            DealerCardsLabel.Visible = false;
+            DealerValueLabel.Visible = false;
+        }
+
+        private void Clearbetbutton_Click(object sender, EventArgs e)
+        {
+            bet.Reset();
+            TotalBetLabel.Text = "0";
+        }
+
+        private void BackToCasinoButton_Click(object sender, EventArgs e)
+        {
+
+            Casino_Form form = new Casino_Form();
+            form.LoggedInUser = LoggedInUser;
+            form.Show();
+            this.Hide();
+        }
     }
+
 }
