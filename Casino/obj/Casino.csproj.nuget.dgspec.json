@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\Casinuch\\Casino\\Casino.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\Casinuch\\Casino\\Casino.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\Casinuch\\Casino\\Casino.csproj",
         "projectName": "Casino",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\Casinuch\\Casino\\Casino.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\Casinuch\\Casino\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

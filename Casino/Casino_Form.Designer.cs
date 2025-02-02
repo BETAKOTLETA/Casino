@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             ToBlackJackbutton = new Button();
-            button2 = new Button();
+            Rocket = new Button();
             button3 = new Button();
             UserName_label = new Label();
             AmountMoneyLabel = new Label();
@@ -45,14 +45,14 @@
             ToBlackJackbutton.UseVisualStyleBackColor = true;
             ToBlackJackbutton.Click += button1_Click;
             // 
-            // button2
+            // Rocket
             // 
-            button2.Location = new Point(389, 169);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            Rocket.Location = new Point(438, 186);
+            Rocket.Name = "Rocket";
+            Rocket.Size = new Size(75, 23);
+            Rocket.TabIndex = 1;
+            Rocket.Text = "ToRocketbutton";
+            Rocket.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -89,7 +89,7 @@
             Controls.Add(AmountMoneyLabel);
             Controls.Add(UserName_label);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(Rocket);
             Controls.Add(ToBlackJackbutton);
             Name = "Casino_Form";
             Text = "Casino_Form";
@@ -101,7 +101,7 @@
         #endregion
 
         private Button ToBlackJackbutton;
-        private Button button2;
+        private Button Rocket;
         private Button button3;
         private Label UserName_label;
         private Label AmountMoneyLabel;
