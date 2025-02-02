@@ -3,6 +3,9 @@ using Microsoft.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
+using System;
+using Casino.Models;
+
 
 namespace Casino
 {
@@ -73,7 +76,7 @@ namespace Casino
             }
             catch (SqlException ex)
             {
-                if (ex.Number == 2627) // Unique constraint violation
+                if (ex.Number == 2627) 
                 {
                     MessageBox.Show("Username already exists. Please choose a different one.");
                 }
@@ -101,7 +104,7 @@ namespace Casino
                 {
                     connection.Open();
 
-                    string sqlQuery = "SELECT PasswordHash FROM Users WHERE Username = @Username";
+                    string sqlQuery = "SELECT Id, PasswordHash, Is_Admin, Money FROM Users WHERE Username = @Username";
 
                     using (SqlCommand command = new SqlCommand(sqlQuery, connection))
                     {
@@ -111,13 +114,21 @@ namespace Casino
                         {
                             if (reader.Read())
                             {
+
+                                int userId = reader.GetInt32(reader.GetOrdinal("Id"));
                                 string storedHash = reader["PasswordHash"].ToString();
+                                bool isAdmin = reader.GetBoolean(reader.GetOrdinal("Is_Admin"));
+                                decimal Money = reader.GetInt32(reader.GetOrdinal("Money")); 
 
                                 if (VerifyPassword(storedHash, userPassword))
                                 {
                                     MessageBox.Show("Login Successful!");
 
+
+                                    var loggedInUser = new User(userId, userName, Money, isAdmin);
+
                                     Casino_Form form = new Casino_Form();
+                                    form.LoggedInUser = loggedInUser;
                                     form.Show();
                                     this.Hide();
                                 }
