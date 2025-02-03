@@ -16,7 +16,7 @@
         private void InitializeComponent()
         {
             ToBlackJackbutton = new Button();
-            Rocket = new Button();
+            ToRocketkbutton = new Button();
             button3 = new Button();
             UserName_label = new Label();
             AmountMoneyLabel = new Label();
@@ -26,7 +26,7 @@
             // 
             // ToBlackJackbutton
             // 
-            ToBlackJackbutton.BackColor = Color.Red;
+            ToBlackJackbutton.BackColor = Color.Black;
             ToBlackJackbutton.FlatAppearance.BorderSize = 0;
             ToBlackJackbutton.FlatStyle = FlatStyle.Flat;
             ToBlackJackbutton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -39,19 +39,20 @@
             ToBlackJackbutton.UseVisualStyleBackColor = false;
             ToBlackJackbutton.Click += ToBlackJackbutton_Click;
             // 
-            // Rocket
+            // ToRocketkbutton
             // 
-            Rocket.BackColor = Color.Black;
-            Rocket.FlatAppearance.BorderSize = 0;
-            Rocket.FlatStyle = FlatStyle.Flat;
-            Rocket.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            Rocket.ForeColor = Color.White;
-            Rocket.Location = new Point(100, 170);
-            Rocket.Name = "Rocket";
-            Rocket.Size = new Size(200, 50);
-            Rocket.TabIndex = 1;
-            Rocket.Text = "🚀 Rocket";
-            Rocket.UseVisualStyleBackColor = false;
+            ToRocketkbutton.BackColor = Color.Black;
+            ToRocketkbutton.FlatAppearance.BorderSize = 0;
+            ToRocketkbutton.FlatStyle = FlatStyle.Flat;
+            ToRocketkbutton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            ToRocketkbutton.ForeColor = Color.White;
+            ToRocketkbutton.Location = new Point(100, 170);
+            ToRocketkbutton.Name = "ToRocketkbutton";
+            ToRocketkbutton.Size = new Size(200, 50);
+            ToRocketkbutton.TabIndex = 1;
+            ToRocketkbutton.Text = "🚀 Cash Or Crash";
+            ToRocketkbutton.UseVisualStyleBackColor = false;
+            ToRocketkbutton.MouseClick += ToRocketkbutton_MouseClick;
             // 
             // button3
             // 
@@ -74,9 +75,8 @@
             UserName_label.ForeColor = Color.Black;
             UserName_label.Location = new Point(20, 15);
             UserName_label.Name = "UserName_label";
-            UserName_label.Size = new Size(146, 19);
+            UserName_label.Size = new Size(0, 19);
             UserName_label.TabIndex = 3;
-
             // 
             // AmountMoneyLabel
             // 
@@ -85,13 +85,12 @@
             AmountMoneyLabel.ForeColor = Color.Black;
             AmountMoneyLabel.Location = new Point(140, 15);
             AmountMoneyLabel.Name = "AmountMoneyLabel";
-            AmountMoneyLabel.Size = new Size(113, 19);
+            AmountMoneyLabel.Size = new Size(0, 19);
             AmountMoneyLabel.TabIndex = 4;
-
             // 
             // button1
             // 
-            button1.BackColor = Color.Black;
+            button1.BackColor = Color.Red;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -128,7 +127,7 @@
             Controls.Add(AmountMoneyLabel);
             Controls.Add(UserName_label);
             Controls.Add(button3);
-            Controls.Add(Rocket);
+            Controls.Add(ToRocketkbutton);
             Controls.Add(ToBlackJackbutton);
             Font = new Font("Segoe UI", 10F);
             Name = "Casino_Form";
@@ -139,7 +138,7 @@
         }
 
         private Button ToBlackJackbutton;
-        private Button Rocket;
+        private Button ToRocketkbutton;
         private Button button3;
         private Button RouletteButton;
         private Label UserName_label;
