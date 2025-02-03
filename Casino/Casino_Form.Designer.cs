@@ -65,7 +65,7 @@
             ToSlotskbutton.Name = "ToSlotskbutton";
             ToSlotskbutton.Size = new Size(200, 50);
             ToSlotskbutton.TabIndex = 2;
-            ToSlotskbutton.Text = "🎰 Slots (Coming Soon)";
+            ToSlotskbutton.Text = "🎰 Slots";
             ToSlotskbutton.UseVisualStyleBackColor = false;
             ToSlotskbutton.Click += ToSlotskbutton_Click;
             // 
@@ -115,7 +115,7 @@
             RouletteButton.Name = "RouletteButton";
             RouletteButton.Size = new Size(200, 50);
             RouletteButton.TabIndex = 6;
-            RouletteButton.Text = "Chat";
+            RouletteButton.Text = "Chat ( Comming soon)";
             RouletteButton.UseVisualStyleBackColor = false;
             RouletteButton.Click += RouletteButton_Click;
             // 

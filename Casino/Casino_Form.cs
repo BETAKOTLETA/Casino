@@ -27,6 +27,9 @@ namespace Casino
             {
                 UserName_label.Text = LoggedInUser.Username;
                 AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+
+                AmountMoneyLabel.Text = $"Balance: {LoggedInUser.Money:C}";
+                UserName_label.Text = LoggedInUser.Username;
             }
         }
 

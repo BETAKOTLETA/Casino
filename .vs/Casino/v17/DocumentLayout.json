@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 273,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -107,18 +107,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:2:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Slots_Form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casinuch\\Casino\\Slots_Form.cs",
-              "RelativeDocumentMoniker": "Casino\\Slots_Form.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casinuch\\Casino\\Slots_Form.cs [Design]",
-              "RelativeToolTip": "Casino\\Slots_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T13:45:33.546Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -153,10 +141,22 @@
               "RelativeDocumentMoniker": "Casino\\Rocket_Form.Designer.cs",
               "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casinuch\\Casino\\Rocket_Form.Designer.cs",
               "RelativeToolTip": "Casino\\Rocket_Form.Designer.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAqwPUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAIwPUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-03T10:28:14.564Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Slots_Form.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Casinuch\\Casino\\Slots_Form.cs",
+              "RelativeDocumentMoniker": "Casino\\Slots_Form.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Casinuch\\Casino\\Slots_Form.cs [Design]",
+              "RelativeToolTip": "Casino\\Slots_Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T13:45:33.546Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
