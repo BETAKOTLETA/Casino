@@ -2,15 +2,15 @@
 {
     partial class Login_Form
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private Label label1;
+        private Button Login_account_button;
+        private TextBox LoginName_TextBox;
+        private TextBox LoginPassword_TextBox;
+        private Button Create_account_button;
+        private Label label2;
+        private Label label3;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,14 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            BackColor = Color.White;
+            Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+
             label1 = new Label();
             Login_account_button = new Button();
             LoginName_TextBox = new TextBox();
@@ -36,95 +33,86 @@
             label2 = new Label();
             label3 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
+
+            // Welcome Label
             label1.AutoSize = true;
-            label1.Location = new Point(320, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Welcome to Casino";
-            // 
-            // Login_account_button
-            // 
-            Login_account_button.Location = new Point(387, 250);
-            Login_account_button.Name = "Login_account_button";
-            Login_account_button.Size = new Size(75, 23);
-            Login_account_button.TabIndex = 1;
-            Login_account_button.Text = "Login";
-            Login_account_button.UseVisualStyleBackColor = true;
-            Login_account_button.Click += Login_account_button_Click;
-            // 
-            // LoginName_TextBox
-            // 
-            LoginName_TextBox.Location = new Point(330, 114);
-            LoginName_TextBox.Name = "LoginName_TextBox";
-            LoginName_TextBox.Size = new Size(100, 23);
-            LoginName_TextBox.TabIndex = 2;
-            // 
-            // LoginPassword_TextBox
-            // 
-            LoginPassword_TextBox.Location = new Point(330, 187);
-            LoginPassword_TextBox.Name = "LoginPassword_TextBox";
-            LoginPassword_TextBox.Size = new Size(100, 23);
-            LoginPassword_TextBox.TabIndex = 3;
-            // 
-            // Create_account_button
-            // 
-            Create_account_button.Location = new Point(282, 250);
-            Create_account_button.Name = "Create_account_button";
-            Create_account_button.Size = new Size(75, 23);
-            Create_account_button.TabIndex = 4;
-            Create_account_button.Text = "Create";
-            Create_account_button.UseVisualStyleBackColor = true;
-            Create_account_button.Click += Create_account_button_Click;
-            // 
-            // label2
-            // 
+            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(280, 30);
+            label1.Text = "🎰 Welcome to Casino 🎲";
+
+            // Username Label
             label2.AutoSize = true;
-            label2.Location = new Point(330, 81);
-            label2.Name = "label2";
-            label2.Size = new Size(60, 15);
-            label2.TabIndex = 5;
+            label2.Location = new Point(310, 100);
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label2.ForeColor = Color.Black;
             label2.Text = "Username";
-            // 
-            // label3
-            // 
+
+            // Username TextBox
+            LoginName_TextBox.Location = new Point(310, 125);
+            LoginName_TextBox.Size = new Size(180, 30);
+            LoginName_TextBox.Font = new Font("Segoe UI", 10F);
+            LoginName_TextBox.BackColor = Color.White;
+            LoginName_TextBox.ForeColor = Color.Black;
+            LoginName_TextBox.BorderStyle = BorderStyle.FixedSingle;
+
+            // Password Label
             label3.AutoSize = true;
-            label3.Location = new Point(330, 158);
-            label3.Name = "label3";
-            label3.Size = new Size(57, 15);
-            label3.TabIndex = 6;
+            label3.Location = new Point(310, 170);
+            label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label3.ForeColor = Color.Black;
             label3.Text = "Password";
-            // 
-            // Login_Form
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+
+            // Password TextBox
+            LoginPassword_TextBox.Location = new Point(310, 195);
+            LoginPassword_TextBox.Size = new Size(180, 30);
+            LoginPassword_TextBox.Font = new Font("Segoe UI", 10F);
+            LoginPassword_TextBox.BackColor = Color.White;
+            LoginPassword_TextBox.ForeColor = Color.Black;
+            LoginPassword_TextBox.BorderStyle = BorderStyle.FixedSingle;
+            LoginPassword_TextBox.PasswordChar = '*';
+
+            // Login Button (Red Theme)
+            Login_account_button.Location = new Point(410, 260);
+            Login_account_button.Size = new Size(80, 35);
+            Login_account_button.Text = "Login";
+            Login_account_button.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            Login_account_button.ForeColor = Color.White;
+            Login_account_button.BackColor = Color.Red;
+            Login_account_button.FlatStyle = FlatStyle.Flat;
+            Login_account_button.FlatAppearance.BorderSize = 0;
+            Login_account_button.Cursor = Cursors.Hand;
+            Login_account_button.Click += Login_account_button_Click;
+
+            // Create Account Button (Black Theme)
+            Create_account_button.Location = new Point(310, 260);
+            Create_account_button.Size = new Size(80, 35);
+            Create_account_button.Text = "Create";
+            Create_account_button.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            Create_account_button.ForeColor = Color.White;
+            Create_account_button.BackColor = Color.Black;
+            Create_account_button.FlatStyle = FlatStyle.Flat;
+            Create_account_button.FlatAppearance.BorderSize = 0;
+            Create_account_button.Cursor = Cursors.Hand;
+            Create_account_button.Click += Create_account_button_Click;
+
+            // Login_Form Settings
+            AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(Create_account_button);
-            Controls.Add(LoginPassword_TextBox);
-            Controls.Add(LoginName_TextBox);
-            Controls.Add(Login_account_button);
+            ClientSize = new Size(800, 400);
             Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(LoginName_TextBox);
+            Controls.Add(label3);
+            Controls.Add(LoginPassword_TextBox);
+            Controls.Add(Login_account_button);
+            Controls.Add(Create_account_button);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
             Name = "Login_Form";
-            Text = "Form1";
-            Load += Login_Form_Load;
+            Text = "Casino Login";
             ResumeLayout(false);
             PerformLayout();
         }
-
-        #endregion
-
-        private Label label1;
-        private Button Login_account_button;
-        private TextBox LoginName_TextBox;
-        private TextBox LoginPassword_TextBox;
-        private Button Create_account_button;
-        private Label label2;
-        private Label label3;
     }
 }

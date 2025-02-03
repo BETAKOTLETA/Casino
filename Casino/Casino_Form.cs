@@ -21,24 +21,22 @@ namespace Casino
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Casino_Form_Load(object sender, EventArgs e)
+        {
+            if (LoggedInUser != null)
+            {
+                UserName_label.Text = LoggedInUser.Username;
+                AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
+            }
+        }
+
+        private void ToBlackJackbutton_Click(object sender, EventArgs e)
         {
             BlackJack_Form form = new BlackJack_Form(LoggedInUser);
 
             form.LoggedInUser = LoggedInUser;
             form.Show();
             this.Hide();
-
-
-        }
-
-        private void Casino_Form_Load(object sender, EventArgs e)
-        {
-            if (LoggedInUser != null)
-            {
-                UserName_label.Text = LoggedInUser.Username;
-                AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C"); 
-            }
         }
     }
 }
