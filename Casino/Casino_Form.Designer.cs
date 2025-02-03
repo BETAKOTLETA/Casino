@@ -17,7 +17,7 @@
         {
             ToBlackJackbutton = new Button();
             ToRocketkbutton = new Button();
-            button3 = new Button();
+            ToSlotskbutton = new Button();
             UserName_label = new Label();
             AmountMoneyLabel = new Label();
             button1 = new Button();
@@ -54,19 +54,20 @@
             ToRocketkbutton.UseVisualStyleBackColor = false;
             ToRocketkbutton.MouseClick += ToRocketkbutton_MouseClick;
             // 
-            // button3
+            // ToSlotskbutton
             // 
-            button3.BackColor = Color.Black;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(350, 100);
-            button3.Name = "button3";
-            button3.Size = new Size(200, 50);
-            button3.TabIndex = 2;
-            button3.Text = "🎰 Slots (Coming Soon)";
-            button3.UseVisualStyleBackColor = false;
+            ToSlotskbutton.BackColor = Color.Black;
+            ToSlotskbutton.FlatAppearance.BorderSize = 0;
+            ToSlotskbutton.FlatStyle = FlatStyle.Flat;
+            ToSlotskbutton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            ToSlotskbutton.ForeColor = Color.White;
+            ToSlotskbutton.Location = new Point(350, 100);
+            ToSlotskbutton.Name = "ToSlotskbutton";
+            ToSlotskbutton.Size = new Size(200, 50);
+            ToSlotskbutton.TabIndex = 2;
+            ToSlotskbutton.Text = "🎰 Slots (Coming Soon)";
+            ToSlotskbutton.UseVisualStyleBackColor = false;
+            ToSlotskbutton.Click += ToSlotskbutton_Click;
             // 
             // UserName_label
             // 
@@ -126,7 +127,7 @@
             Controls.Add(RouletteButton);
             Controls.Add(AmountMoneyLabel);
             Controls.Add(UserName_label);
-            Controls.Add(button3);
+            Controls.Add(ToSlotskbutton);
             Controls.Add(ToRocketkbutton);
             Controls.Add(ToBlackJackbutton);
             Font = new Font("Segoe UI", 10F);
@@ -139,7 +140,7 @@
 
         private Button ToBlackJackbutton;
         private Button ToRocketkbutton;
-        private Button button3;
+        private Button ToSlotskbutton;
         private Button RouletteButton;
         private Label UserName_label;
         private Label AmountMoneyLabel;

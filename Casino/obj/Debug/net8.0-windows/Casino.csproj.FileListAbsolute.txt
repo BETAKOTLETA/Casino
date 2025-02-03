@@ -242,3 +242,4 @@ C:\Users\Administrator\Source\Repos\Casifgfdggdf\Casino\obj\Debug\net8.0-windows
 C:\Users\Administrator\Source\Repos\Casifgfdggdf\Casino\obj\Debug\net8.0-windows\Casino.Properties.Resources.resources
 C:\Users\Admin\Source\Repos\Casinuch\Casino\obj\Debug\net8.0-windows\Casino.Properties.Resources.resources
 C:\Users\Admin\Source\Repos\Casinuch\Casino\obj\Debug\net8.0-windows\Casino.Rocket_Form.resources
+C:\Users\Admin\Source\Repos\Casinuch\Casino\obj\Debug\net8.0-windows\Casino.Slots_Form.resources

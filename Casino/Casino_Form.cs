@@ -47,5 +47,14 @@ namespace Casino
             form.Show();
             this.Hide();
         }
+
+        private void ToSlotskbutton_Click(object sender, EventArgs e)
+        {
+            Slots_Form form = new Slots_Form(LoggedInUser);
+
+            form.LoggedInUser = LoggedInUser;
+            form.Show();
+            this.Hide();
+        }
     }
 }

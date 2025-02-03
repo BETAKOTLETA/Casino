@@ -54,7 +54,7 @@ namespace Casino
             if (!_cashedOut)
             {
                 decimal winnings = bet.Amount * (decimal)_rocket.CurrentCoefficient;
-                _currentUser.Money += winnings;
+                _currentUser.UpdateToDataBaseMoney(winnings);
                 AmountMoneyLabel.Text = $"Balance: {_currentUser.Money:C}";
                 resultLabel.Text = $"You cashed out at x{_rocket.CurrentCoefficient:F2}!";
                 _cashedOut = true;
@@ -90,11 +90,14 @@ namespace Casino
                 bet = new Bet(0, LoggedInUser);
                 UserName_label.Text = LoggedInUser.Username;
                 AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
-                
+
 
             }
         }
 
+        private void coefficientLabel_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 } 

@@ -40,7 +40,9 @@
             BackToCasinoButton = new Button();
             AmountMoneyLabel = new Label();
             UserName_label = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)rocketPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // betTextBox
@@ -88,12 +90,13 @@
             // 
             coefficientLabel.AutoSize = true;
             coefficientLabel.Font = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            coefficientLabel.Location = new Point(206, 170);
+            coefficientLabel.Location = new Point(343, 227);
             coefficientLabel.Margin = new Padding(4, 0, 4, 0);
             coefficientLabel.Name = "coefficientLabel";
             coefficientLabel.Size = new Size(85, 31);
             coefficientLabel.TabIndex = 4;
             coefficientLabel.Text = "1.00x";
+            coefficientLabel.Click += coefficientLabel_Click;
             // 
             // rocketPictureBox
             // 
@@ -143,11 +146,20 @@
             UserName_label.TabIndex = 20;
             UserName_label.Text = "UserName";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(213, 177);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 179);
+            pictureBox1.TabIndex = 23;
+            pictureBox1.TabStop = false;
+            // 
             // Rocket_Form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(583, 462);
+            Controls.Add(pictureBox1);
             Controls.Add(BackToCasinoButton);
             Controls.Add(AmountMoneyLabel);
             Controls.Add(UserName_label);
@@ -163,6 +175,7 @@
             Text = "Cash Or Crash";
             Load += Rocket_Form_Load;
             ((System.ComponentModel.ISupportInitialize)rocketPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,5 +193,6 @@
         public Button BackToCasinoButton;
         private Label AmountMoneyLabel;
         private Label UserName_label;
+        private PictureBox pictureBox1;
     }
 }
