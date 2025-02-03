@@ -26,7 +26,7 @@
             // 
             // ToBlackJackbutton
             // 
-            ToBlackJackbutton.BackColor = Color.Black;
+            ToBlackJackbutton.BackColor = Color.Red;
             ToBlackJackbutton.FlatAppearance.BorderSize = 0;
             ToBlackJackbutton.FlatStyle = FlatStyle.Flat;
             ToBlackJackbutton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -90,7 +90,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Red;
+            button1.BackColor = Color.Black;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
@@ -104,7 +104,7 @@
             // 
             // RouletteButton
             // 
-            RouletteButton.BackColor = Color.Black;
+            RouletteButton.BackColor = Color.Red;
             RouletteButton.FlatAppearance.BorderSize = 0;
             RouletteButton.FlatStyle = FlatStyle.Flat;
             RouletteButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
