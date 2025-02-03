@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Casino.Models
 {
@@ -39,8 +40,10 @@ namespace Casino.Models
                     command.Parameters.AddWithValue("@Username", Username);
                     command.ExecuteNonQuery();
                 }
-            }
+            }   
         }
+
+
         public async Task AsyncMoney(int userId, Label TotalBetLabelAmountMoneyLabel)
         {
             decimal money = 0;
@@ -112,6 +115,13 @@ namespace Casino.Models
     }
     public class Game
     {
+        public void Draw(Bet bet, User user)
+        {
+            decimal payout = bet.Amount;
+            user.UpdateToDataBaseMoney(payout);
+            bet.SetAmount(0);
+        }
+
         public void WinBet(Bet bet, User user)
         {
             decimal payout = bet.Amount * 2;
@@ -183,6 +193,96 @@ namespace Casino.Models
             Card drawnCard = Cards[0];
             Cards.RemoveAt(0);
             return drawnCard;
+        }
+    }
+    public class Rocket
+    {
+        private System.Timers.Timer _gameTimer;
+        private int _crashTime;
+        private bool _isGameActive;
+        private Random _random = new Random();
+        private User _user;
+        private Bet _bet;
+        private Form _form;
+
+
+        public double CurrentCoefficient { get; private set; }
+
+        public event Action<double> OnCoefficientUpdate;
+        public event Action<string> OnGameEnd;
+
+        public Rocket(Bet bet, Form form)
+        {
+            _bet = bet;
+            _form = form;
+            _gameTimer = new System.Timers.Timer(100);
+            _gameTimer.Elapsed += UpdateCoefficient;
+        }
+
+        public void StartGame(Bet bet, User user)
+        {
+            if (_isGameActive) return;
+
+            _bet = bet;
+            _user = user;
+            CurrentCoefficient = 0.80; 
+            _crashTime = _random.Next(3000, 20000);
+            _isGameActive = true;
+            _gameTimer.Start();
+        }
+
+        private void UpdateCoefficient(object sender, ElapsedEventArgs e)
+        {
+            if (!_isGameActive) return;
+
+            CurrentCoefficient += 0.01;
+            _crashTime -= 100;
+
+
+            OnCoefficientUpdate?.Invoke(CurrentCoefficient);
+
+            if (_crashTime <= 0)
+            {
+                Crash();
+            }
+        }
+
+        public void CashOut()
+        {
+            if (!_isGameActive) return;
+
+            decimal payout = _bet.Amount * (decimal)CurrentCoefficient;
+            _user.UpdateToDataBaseMoney(payout);
+            _bet.Reset();
+            EndGame($"Cashed out at {CurrentCoefficient:F2}x!");
+        }
+
+        private void Crash()
+        {
+            EndGame("Rocket crashed! You lose.");
+            _bet.Reset();
+
+            if (_form is Rocket_Form rocketForm)
+            {
+                rocketForm.Invoke((Action)(() =>
+                {
+                    rocketForm.BackToCasinoButton.Enabled = true;
+                    rocketForm.startButton.Enabled = true;
+                    rocketForm.cashOutButton.Enabled = false;
+                }));
+            }
+        }
+
+        private void EndGame(string message)
+        {
+            _gameTimer.Stop();
+            _isGameActive = false;
+            OnGameEnd?.Invoke(message);
+        }
+
+        public void StopGame()
+        {
+            EndGame("Game stopped manually.");
         }
     }
 }

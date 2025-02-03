@@ -38,5 +38,14 @@ namespace Casino
             form.Show();
             this.Hide();
         }
+
+        private void ToRocketkbutton_MouseClick(object sender, MouseEventArgs e)
+        {
+            Rocket_Form form = new Rocket_Form(LoggedInUser);
+
+            form.LoggedInUser = LoggedInUser;
+            form.Show();
+            this.Hide();
+        }
     }
 }

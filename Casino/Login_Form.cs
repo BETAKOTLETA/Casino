@@ -37,7 +37,7 @@ namespace Casino
             string userName = LoginName_TextBox.Text.Trim();
             string userPassword = LoginPassword_TextBox.Text.Trim();
 
-            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(userPassword))
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(userPassword))   
             {
                 MessageBox.Show("Please enter a username and password.");
                 return;
