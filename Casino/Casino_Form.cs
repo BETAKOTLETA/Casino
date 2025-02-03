@@ -30,6 +30,15 @@ namespace Casino
 
                 AmountMoneyLabel.Text = $"Balance: {LoggedInUser.Money:C}";
                 UserName_label.Text = LoggedInUser.Username;
+
+                if (LoggedInUser.IsAdmin)
+                {
+                    UserName_label.ForeColor = Color.Gold;
+                }
+                else
+                {
+                    UserName_label.ForeColor = SystemColors.ControlText;
+                }
             }
         }
 
