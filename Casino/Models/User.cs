@@ -90,15 +90,12 @@ namespace Casino.Models
             if (newAmount > _user.Money)
             {
                 MessageBox.Show($"not enough money");
+                return;
             }
             if (newAmount > MaxBet)
             {
                 MessageBox.Show($"Maximum bet is {MaxBet}.");
                 newAmount = MaxBet;
-            }
-            else if (newAmount < MinBet)
-            {
-                newAmount = MinBet;
             }
             Amount = newAmount;
             totalBetLabel.Text = Amount.ToString("C");

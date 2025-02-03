@@ -56,5 +56,18 @@ namespace Casino
             form.Show();
             this.Hide();
         }
+
+        private void RouletteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login_Form form = new Login_Form();
+
+            form.Show();
+            this.Hide();
+        }
     }
 }

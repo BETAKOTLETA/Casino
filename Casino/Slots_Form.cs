@@ -39,6 +39,15 @@ namespace Casino
 
 
             UpdateLabels();
+
+            if (LoggedInUser.IsAdmin)
+            {
+                UserName_label.ForeColor = Color.Gold;
+            }
+            else
+            {
+                UserName_label.ForeColor = SystemColors.ControlText;
+            }
         }
 
         private enum Symbol
@@ -189,7 +198,6 @@ namespace Casino
         {
             decimal totalWin = 0m;
 
-            // Loop over each payline to check for winning symbols
             foreach (var line in paylines)
             {
                 for (int startIndex = 0; startIndex < line.Length; startIndex++)
@@ -197,7 +205,6 @@ namespace Casino
                     Symbol lineSymbol = spinResult[line[startIndex]];
                     int consecutive = 1;
 
-                    // Check for consecutive symbols from the startIndex
                     for (int i = startIndex + 1; i < line.Length; i++)
                     {
                         if (spinResult[line[i]] == lineSymbol)
@@ -206,7 +213,6 @@ namespace Casino
                             break;
                     }
 
-                    // Check if the consecutive count is enough to pay out
                     if (payTable.TryGetValue(lineSymbol, out var symbolPays))
                     {
                         foreach (var count in symbolPays.Keys.OrderByDescending(k => k))
@@ -221,7 +227,6 @@ namespace Casino
                 }
             }
 
-            // Handle scatter symbols (Lollipop)
             int scatterCount = spinResult.Count(s => s == Symbol.Lollipop);
             if (payTable.ContainsKey(Symbol.Lollipop) && payTable[Symbol.Lollipop].TryGetValue(scatterCount, out decimal scatterPayout))
             {
@@ -232,7 +237,7 @@ namespace Casino
         }
         private void UpdateLabels()
         {
-            lblBet.Text = $"Bet: €{nudBet.Value:F2}";
+            lblBet.Text = $"Bet: €{nudBet.Value:F2}";   
         }
 
         private void pbSlot4_Click(object sender, EventArgs e)
@@ -253,6 +258,14 @@ namespace Casino
         private void pbSlot3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BackToCasinoButton_Click(object sender, EventArgs e)
+        {
+            Casino_Form form = new Casino_Form();
+            form.LoggedInUser = LoggedInUser;
+            form.Show();
+            this.Hide();
         }
     }
 }

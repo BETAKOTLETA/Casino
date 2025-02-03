@@ -151,11 +151,17 @@ namespace Casino
                 AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
                 HitButton.Visible = false;
                 StandButton.Visible = false;
-
+                if (LoggedInUser.IsAdmin)
+                {
+                    UserName_label.ForeColor = Color.Gold;
+                }
+                else
+                {
+                    UserName_label.ForeColor = SystemColors.ControlText;
+                }
                 DontShowPlayerandDealer();
-
-
             }
+
         }
 
         private void DealerCardsLabel_Click(object sender, EventArgs e)
@@ -281,6 +287,11 @@ namespace Casino
             form.LoggedInUser = LoggedInUser;
             form.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

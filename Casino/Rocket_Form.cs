@@ -81,7 +81,10 @@ namespace Casino
 
         private void BackToCasinoButton_Click(object sender, EventArgs e)
         {
-            Close();
+            Casino_Form form = new Casino_Form();
+            form.LoggedInUser = LoggedInUser;
+            form.Show();
+            this.Hide();
         }
         private void Rocket_Form_Load(object sender, EventArgs e)
         {
@@ -90,8 +93,14 @@ namespace Casino
                 bet = new Bet(0, LoggedInUser);
                 UserName_label.Text = LoggedInUser.Username;
                 AmountMoneyLabel.Text = LoggedInUser.Money.ToString("C");
-
-
+            }
+            if (LoggedInUser.IsAdmin)
+            {
+                UserName_label.ForeColor = Color.Gold;
+            }
+            else
+            {
+                UserName_label.ForeColor = SystemColors.ControlText;
             }
         }
 

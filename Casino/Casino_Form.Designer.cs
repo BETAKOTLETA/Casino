@@ -100,8 +100,9 @@
             button1.Name = "button1";
             button1.Size = new Size(200, 50);
             button1.TabIndex = 5;
-            button1.Text = "Exit";
+            button1.Text = "Log out";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // RouletteButton
             // 
@@ -114,15 +115,16 @@
             RouletteButton.Name = "RouletteButton";
             RouletteButton.Size = new Size(200, 50);
             RouletteButton.TabIndex = 6;
-            RouletteButton.Text = "🎲 Roulette (Coming Soon)";
+            RouletteButton.Text = "Chat";
             RouletteButton.UseVisualStyleBackColor = false;
+            RouletteButton.Click += RouletteButton_Click;
             // 
             // Casino_Form
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(665, 430);
             Controls.Add(button1);
             Controls.Add(RouletteButton);
             Controls.Add(AmountMoneyLabel);

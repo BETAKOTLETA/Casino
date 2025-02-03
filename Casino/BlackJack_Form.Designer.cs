@@ -256,9 +256,9 @@
             TotalBetLabel.ForeColor = Color.Black;
             TotalBetLabel.Location = new Point(28, 241);
             TotalBetLabel.Name = "TotalBetLabel";
-            TotalBetLabel.Size = new Size(105, 20);
+            TotalBetLabel.Size = new Size(18, 20);
             TotalBetLabel.TabIndex = 17;
-            TotalBetLabel.Text = "TotalBetLabel";
+            TotalBetLabel.Text = "0";
             // 
             // Clearbetbutton
             // 
@@ -333,7 +333,6 @@
             groupBox3.TabIndex = 0;
             groupBox3.TabStop = false;
             groupBox3.Text = "Bets";
-            //groupBox3.Enter += groupBox3_Enter;
             // 
             // BlackJack_Form
             // 

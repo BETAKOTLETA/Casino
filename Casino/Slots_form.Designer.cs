@@ -129,6 +129,7 @@
             BackToCasinoButton.TabIndex = 29;
             BackToCasinoButton.Text = "Back";
             BackToCasinoButton.UseVisualStyleBackColor = true;
+            BackToCasinoButton.Click += BackToCasinoButton_Click;
             // 
             // AmountMoneyLabel
             // 
