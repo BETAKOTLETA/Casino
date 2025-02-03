@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj": {}
+    "C:\\Users\\fakvo\\source\\repos\\Casino1\\Casino\\Casino.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj": {
+    "C:\\Users\\fakvo\\source\\repos\\Casino1\\Casino\\Casino.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj",
+        "projectUniqueName": "C:\\Users\\fakvo\\source\\repos\\Casino1\\Casino\\Casino.csproj",
         "projectName": "Casino",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\Casino.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\Casino\\Casino\\obj\\",
+        "projectPath": "C:\\Users\\fakvo\\source\\repos\\Casino1\\Casino\\Casino.csproj",
+        "packagesPath": "C:\\Users\\fakvo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fakvo\\source\\repos\\Casino1\\Casino\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\fakvo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,8 +39,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -52,7 +47,7 @@
           "dependencies": {
             "Azure.Identity": {
               "target": "Package",
-              "version": "[1.11.4, )"
+              "version": "[1.13.2, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -60,7 +55,7 @@
             },
             "MySql.Data": {
               "target": "Package",
-              "version": "[9.1.0, )"
+              "version": "[9.2.0, )"
             }
           },
           "imports": [
@@ -82,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

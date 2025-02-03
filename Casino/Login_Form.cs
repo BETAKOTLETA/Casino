@@ -11,7 +11,7 @@ namespace Casino
 {
     public partial class Login_Form : Form
     {
-        private readonly string connectionString = "Server=DESKTOP-C7TE4MK;Database=UserApp3;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true";
+        private readonly string connectionString = "Server=tcp:azureviksevsni.database.windows.net,1433;Initial Catalog=UserAzureDataBase;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";";
 
         public Login_Form()
         {
